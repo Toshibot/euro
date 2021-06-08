@@ -1131,7 +1131,7 @@ body {
     font-size: 1.5rem;
     padding: 25px 0; }
   .o-section--ladders {
-    padding: 1.8%; }
+    padding: 0 1.8% 64px; }
   .o-section--white {
     background: #fff; }
   .o-section--pattern {
@@ -1598,6 +1598,9 @@ body {
     color: #333; }
   .c-fixture__game--completed {
     background: #444; }
+  @media screen and (min-width: 75em) {
+    .c-fixture__game {
+      margin-bottom: 30px; } }
   @media screen and (max-width: 64em) {
     .c-fixture__game {
       width: 100%;
