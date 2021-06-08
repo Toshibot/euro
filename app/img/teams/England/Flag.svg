@@ -4,7 +4,6 @@
 </mask>
 <g mask="url(#mask0)">
 <path d="M643 0H0V643H643V0Z" fill="white"/>
-<path d="M643 259H0V385H643V259Z" fill="#D0021B"/>
-<path d="M385 0H259V643H385V0Z" fill="#D0021B"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M259 0H385V259H643V385H385V643H259V385H0V259H259V0Z" fill="#D0021B"/>
 </g>
 </svg>

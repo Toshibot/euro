@@ -210,7 +210,7 @@
         }
     },
     "1977":{
-        "name": "Nth Macedonia",
+        "name": "Macedonia",
         "logo":"img/teams/Nth_Macedonia/Flag.svg",
         "kits":{
             "home":{
@@ -445,8 +445,8 @@
         "logo":"img/teams/Germany/Flag.svg",
         "kits":{
             "home":{
-                "tone":"mid",
-                "color":"red",
+                "tone":"light",
+                "color":"white",
                 "file":"img/teams/Germany/Home.png"
             },
             "away":{
@@ -455,8 +455,8 @@
                 "file":"img/teams/Germany/Away.png"
             },
             "third":{
-                "tone":"mid",
-                "color":"red",
+                "tone":"light",
+                "color":"white",
                 "file":"img/teams/Germany/Home.png"
             }
         }

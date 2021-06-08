@@ -32,6 +32,8 @@ function dataFixture(data_teams) {
     self.ajax(self.matchdayURI, 'GET').done(function(data){
         var competitions = data.competitions;
 
+        console.log(competitions);
+
         for (i = 0; i < competitions.length; i++) {
             const comp = competitions[i];
             
@@ -39,32 +41,37 @@ function dataFixture(data_teams) {
                 matchday.push(comp.currentSeason.currentMatchday);
             }
         }
+        
+        fixture_build();
     });
 
-    self.ajax(self.matchesURI, 'GET').done(function(data) {
+    function fixture_build(){
 
-        var matches = data.matches;
-        var today = new Date;
-        var testDate = new Date('2018-04-24');
-        var currentRound = [];
-        var currentRoundNo = matchday[0];
+        self.ajax(self.matchesURI, 'GET').done(function(data) {
 
-        $('.js-fixture-round').text(currentRoundNo + ". Spieltag");
+            var matches = data.matches;
+            var today = new Date;
+            var testDate = new Date('2018-04-24');
+            var currentRound = [];
+            var currentRoundNo = matchday[0];
 
-        for (i = 0; i < matches.length; i++) {
-            const element = matches[i];
-            
-            if (element.matchday == currentRoundNo) {
-                currentRound.push(element);
+            console.log(matchday);
+
+            $('.js-fixture-round').text("Matchday " + currentRoundNo);
+
+            for (i = 0; i < matches.length; i++) {
+                const element = matches[i];
+                
+                if (element.matchday == currentRoundNo) {
+                    currentRound.push(element);
+                }
             }
-        }
 
-        console.log(data);
+            for (i = 0; i < currentRound.length; i++) {
+                const match = currentRound[i];
 
-        for (i = 0; i < currentRound.length; i++) {
-            const match = currentRound[i];
-
-            fixtureItem(match, data_teams);
-        }
-    })
+                fixtureItem(match, data_teams);
+            }
+        })
+    }
 }

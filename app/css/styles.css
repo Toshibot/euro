@@ -1436,7 +1436,7 @@ body {
 
 @media screen and (min-width: 90em) {
   .c-ladder__container {
-    padding-right: 0; } }
+    padding-left: 0; } }
 
 .c-ladder h2 {
   padding-bottom: 15px; }
@@ -1591,7 +1591,7 @@ body {
   margin-bottom: 17px;
   margin-right: 1.5%;
   display: inline-block; }
-  .c-fixture__game:nth-child(4), .c-fixture__game:nth-child(7), .c-fixture__game:nth-child(10) {
+  .c-fixture__game:nth-child(4), .c-fixture__game:nth-child(7), .c-fixture__game:nth-child(10), .c-fixture__game:nth-child(13) {
     margin-right: 0; }
   .c-fixture__game--in-progress {
     background: #efefef;
