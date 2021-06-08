@@ -1130,6 +1130,8 @@ body {
     font-weight: 300;
     font-size: 1.5rem;
     padding: 25px 0; }
+  .o-section--ladders {
+    padding: 1.8%; }
   .o-section--white {
     background: #fff; }
   .o-section--pattern {
@@ -1585,11 +1587,11 @@ body {
 
 .c-fixture__game {
   background: #666;
-  width: 32%;
+  width: 23%;
   margin-bottom: 17px;
   margin-right: 1.5%;
   display: inline-block; }
-  .c-fixture__game:nth-child(4), .c-fixture__game:nth-child(7), .c-fixture__game:nth-child(10), .c-fixture__game:nth-child(13) {
+  .c-fixture__game:nth-child(5), .c-fixture__game:nth-child(9), .c-fixture__game:nth-child(13), .c-fixture__game:nth-child(17) {
     margin-right: 0; }
   .c-fixture__game--in-progress {
     background: #efefef;
