@@ -38,8 +38,6 @@ function dataFixture(data_teams) {
     self.ajax(self.matchdayURI, 'GET').done(function(data){
         var competitions = data.competitions;
 
-        console.log(competitions);
-
         for (i = 0; i < competitions.length; i++) {
             const comp = competitions[i];
             
@@ -60,8 +58,6 @@ function dataFixture(data_teams) {
             var testDate = new Date('2018-04-24');
             var currentRound = [];
             var currentRoundNo = matchday[0];
-
-            console.log(matchday);
 
             $('.js-fixture-round').text("Matchday " + currentRoundNo);
 

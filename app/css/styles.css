@@ -1123,6 +1123,8 @@ body {
     width: 100%;
     padding: 25px 0 12.5px !important;
     background: #222; }
+    .o-section h1 b {
+      font-weight: 700; }
   .o-section h2 {
     font-family: "Montserrat", sans-serif;
     font-weight: 300;
