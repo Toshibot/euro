@@ -5,71 +5,6 @@
 // Core Functions 
 data();
 
-//
-// UI - Buttons
-// ==========================================================================
-
-// Variables
-// var gitButton = document.getElementById('js-button-github');
-
-// gitButton.addEventListener('click', function(){
-//     window.open('https://github.com/Toshibot/webapp-boilerplate', '_blank');
-// });
-
-//
-// Layout - Vertically Centered
-// ==========================================================================
-
-// ***
-// This function vertically centers an object element within 
-// its parent element by calculating the height of the parent,
-// the height of the child and adding padding to the top and 
-// bottom of the child element.
-//
-// Parent Element
-// --------------
-// The parent element must be a jQuery object.
-// eg: $('.o-vert-center')
-//
-// Child Element
-// -------------
-// The child element must be a direct child of the parent and
-// be passed through the function with only its classname.
-// eg: '.o-vert-center__object'
-// *
-
-function vertCenter(element, child) {
-
-    var parentHeight = element.parent().height();
-    // This will give the element the same height
-    // and line-height as it's parent container.
-    element.css({
-        'height': parentHeight + 'px',
-        'line-height': parentHeight + 'px'
-    });
-    
-    element.children(child).css({
-        'height': element.children(child).height(),
-        'padding-top': ( parentHeight - element.children(child).height() )/2 + 'px',
-        'padding-bottom': ( parentHeight - element.children(child).height() )/2 + 'px'
-    });
-}
-
-function clearStyles(element, child) {
-    element.attr('style', '');
-    child.attr('style', '');
-}
-
-// Function applied to the following parent/child classes:
-// vertCenter($('.o-vert-center'), '.o-vert-center__object');
-
-// On window resize clear previous styles then re-run the function.
-$(window).on('resize', function() {
-    // clearStyles($('.o-vert-center'), $('.o-vert-center__object'));
-    // vertCenter($('.o-vert-center'), '.o-vert-center__object');
-});
-
-
 
 // Data - Fixture/Results
 
@@ -219,19 +154,19 @@ function dateTime(d) {
         var day = d.getDay();
 
         if (day == 0) {
-            return 'Sonntag';
+            return 'Sunday';
         } else if (day == 1) {
-            return 'Montag';
+            return 'Monday';
         } else if (day == 2) {
-            return 'Dienstag';
+            return 'Tuesday';
         } else if (day == 3) {
-            return 'Mittwoch';
+            return 'Wednesday';
         } else if (day == 4) {
-            return 'Donnerstag';
+            return 'Thursday';
         } else if (day == 5) {
-            return 'Freitag';
+            return 'Friday';
         } else if (day == 6) {
-            return 'Samstag';
+            return 'Saturday';
         }
     }
 
@@ -243,11 +178,11 @@ function dateTime(d) {
         } else if (m == 1) {
             return 'Feb';
         } else if (m == 2) {
-            return 'Mär';
+            return 'Mar';
         } else if (m == 3) {
             return 'Apr';
         } else if (m == 4) {
-            return 'Mai';
+            return 'May';
         } else if (m == 5) {
             return 'Jun';
         } else if (m == 6) {
@@ -257,11 +192,11 @@ function dateTime(d) {
         } else if (m == 8) {
             return 'Sep';
         } else if (m == 9) {
-            return 'Okt';
+            return 'Oct';
         } else if (m == 10) {
             return 'Nov';
         } else if (m == 11) {
-            return 'Dez';
+            return 'Dec';
         }
     }
 
@@ -531,3 +466,67 @@ function roundCalc(d) {
 
    }
 }
+//
+// Layout - Vertically Centered
+// ==========================================================================
+
+// ***
+// This function vertically centers an object element within 
+// its parent element by calculating the height of the parent,
+// the height of the child and adding padding to the top and 
+// bottom of the child element.
+//
+// Parent Element
+// --------------
+// The parent element must be a jQuery object.
+// eg: $('.o-vert-center')
+//
+// Child Element
+// -------------
+// The child element must be a direct child of the parent and
+// be passed through the function with only its classname.
+// eg: '.o-vert-center__object'
+// *
+
+function vertCenter(element, child) {
+
+    var parentHeight = element.parent().height();
+    // This will give the element the same height
+    // and line-height as it's parent container.
+    element.css({
+        'height': parentHeight + 'px',
+        'line-height': parentHeight + 'px'
+    });
+    
+    element.children(child).css({
+        'height': element.children(child).height(),
+        'padding-top': ( parentHeight - element.children(child).height() )/2 + 'px',
+        'padding-bottom': ( parentHeight - element.children(child).height() )/2 + 'px'
+    });
+}
+
+function clearStyles(element, child) {
+    element.attr('style', '');
+    child.attr('style', '');
+}
+
+// Function applied to the following parent/child classes:
+// vertCenter($('.o-vert-center'), '.o-vert-center__object');
+
+// On window resize clear previous styles then re-run the function.
+$(window).on('resize', function() {
+    // clearStyles($('.o-vert-center'), $('.o-vert-center__object'));
+    // vertCenter($('.o-vert-center'), '.o-vert-center__object');
+});
+
+
+//
+// UI - Buttons
+// ==========================================================================
+
+// Variables
+// var gitButton = document.getElementById('js-button-github');
+
+// gitButton.addEventListener('click', function(){
+//     window.open('https://github.com/Toshibot/webapp-boilerplate', '_blank');
+// });

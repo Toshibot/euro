@@ -7,19 +7,19 @@ function dateTime(d) {
         var day = d.getDay();
 
         if (day == 0) {
-            return 'Sonntag';
+            return 'Sunday';
         } else if (day == 1) {
-            return 'Montag';
+            return 'Monday';
         } else if (day == 2) {
-            return 'Dienstag';
+            return 'Tuesday';
         } else if (day == 3) {
-            return 'Mittwoch';
+            return 'Wednesday';
         } else if (day == 4) {
-            return 'Donnerstag';
+            return 'Thursday';
         } else if (day == 5) {
-            return 'Freitag';
+            return 'Friday';
         } else if (day == 6) {
-            return 'Samstag';
+            return 'Saturday';
         }
     }
 
@@ -31,11 +31,11 @@ function dateTime(d) {
         } else if (m == 1) {
             return 'Feb';
         } else if (m == 2) {
-            return 'Mär';
+            return 'Mar';
         } else if (m == 3) {
             return 'Apr';
         } else if (m == 4) {
-            return 'Mai';
+            return 'May';
         } else if (m == 5) {
             return 'Jun';
         } else if (m == 6) {
@@ -45,11 +45,11 @@ function dateTime(d) {
         } else if (m == 8) {
             return 'Sep';
         } else if (m == 9) {
-            return 'Okt';
+            return 'Oct';
         } else if (m == 10) {
             return 'Nov';
         } else if (m == 11) {
-            return 'Dez';
+            return 'Dec';
         }
     }
 
