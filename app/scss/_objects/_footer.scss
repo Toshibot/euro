@@ -1,0 +1,60 @@
+.o-footer {
+    height: $height-footer;
+    clear: both;
+    background: $color-black-dark;
+    color: $color-white;
+    padding-top: $size-base;
+    z-index: 99;
+    position: relative;
+
+    @media only screen and (max-width: $break-s) {
+        height: auto;
+        padding: $size-base-lg 0;
+        float: left;
+        width: 100%;
+    }
+
+	&__content {
+		width: $width-m;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 16px;
+
+        @media only screen and (max-width: $break-s) {
+            width: $width-s;
+        }
+
+        a:link,
+        a:visited {
+            color: $color-white;
+            text-decoration: none;
+        }
+	}
+
+    &__subtext {
+        text-align: center;
+        color: $color-grey;
+        padding-top: $size-base;
+        font-size: 12px;
+
+        a:link,
+        a:visited {
+            color: $color-grey;
+            text-decoration: none;
+        }
+    }
+
+    .t-dark & {
+        color: $color-white;
+        background-color: $color-black-dark;
+
+        &__subtext {
+            color: $color-white;
+
+            a:link,
+            a:visited {
+                color: $color-grey;
+            }
+        }
+    }
+}

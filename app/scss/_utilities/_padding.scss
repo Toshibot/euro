@@ -1,0 +1,59 @@
+//
+// Padding - Column forced
+// ==========================================================================
+
+.u-padding {
+    padding: $size-base;
+}
+
+.u-padding-col {
+    padding: 0 $size-base;
+
+    @media screen and (max-width: $break-xs) {
+        padding: 0 $size-base-s;
+    }
+}
+
+//
+// Padding Responsive
+// ==========================================================================
+
+.u-padding {
+    &\@sm {
+        @media only screen and (max-width: $break-xs) {
+            padding: $size-base;
+        }
+    }
+    
+    &\@md {
+        @media only screen and (min-width: $break-xs) and (max-width: $break-m) {
+            padding: $size-base;
+        }
+    }
+    
+    &\@lg {
+        @media only screen and (min-width: $break-m) {
+            padding: $size-base;
+        }
+    }
+}
+
+.u-padding-col {
+    &\@sm {
+        @media only screen and (max-width: $break-xs) {
+            padding: 0 $size-base-s;
+        }
+    }
+
+    &\@md {
+        @media only screen and (min-width: $break-xs) and (max-width: $break-m) {
+            padding: 0 $size-base;
+        }
+    }
+
+    &\@lg {
+        @media only screen and (min-width: $break-m) {
+            padding: 0 $size-base;
+        }
+    }
+}

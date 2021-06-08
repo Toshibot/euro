@@ -1,0 +1,33 @@
+.o-section {
+	padding: 0 0 $size-base;
+	width: $width-12;
+	position: relative;
+	z-index: 999;
+
+	h1 {
+		display: inline-block;
+		font-size: toRems(32px);
+		width: $width-12;
+		padding: $size-base 0 $size-base-s !important;
+		background: $color-black-dark;
+	}
+	
+	h2 {
+		font-family: $font-heading;
+		font-weight: 300;
+		font-size: toRems(24px);
+		padding: $size-base 0;
+	}
+
+	&--white {
+		background: $color-white;
+	}
+
+	&--pattern {
+   	background: url(../img/patternWhite.png) repeat #f1ede1;
+	}
+
+	&--pattern-green {
+		background: url(../img/patternWhite.png) repeat #ABD4CE;
+	}
+}

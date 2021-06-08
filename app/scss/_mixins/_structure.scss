@@ -1,0 +1,125 @@
+// ==========================================================================
+// Flex
+// ==========================================================================
+
+@mixin flex-prep() {
+    margin: 0px auto;
+	-webkit-flex-direction: row;
+	-moz-flex-direction: row;
+	-ms-flex-direction: row;
+	flex-direction: row;
+	box-sizing: border-box;
+	-webkit-flex: 0 1 auto;
+	-ms-flex: 0 1 auto;
+	-webkit-box-flex: 0;
+	flex: 0 1 auto;
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+}
+
+@mixin flex-size($percentage) {
+    -ms-flex-preferred-size: $percentage;
+    -webkit-flex-basis: $percentage;
+    flex-basis: $percentage;
+    max-width: $percentage;
+}
+
+//
+// Flex Breakpoints
+// ==========================================================================
+
+@mixin flex-small($percentage) {
+    @media only screen and (max-width: $break-s) {
+        @include flex-size($percentage);
+    }
+}
+
+@mixin flex-medium($percentage) {
+    @media only screen and (max-width: $break-m) {
+        @include flex-size($percentage);
+    }
+}
+
+@mixin flex-large($percentage) {
+    @media only screen and (min-width: $break-m) {
+        @include flex-size($percentage);
+    }
+}
+
+// ==========================================================================
+// Grid
+// ==========================================================================
+
+@mixin grid-width($fraction) {
+    width: #{$fraction*100 + '%'};
+    display: inline-block;
+    float: left;
+}
+
+// Offset
+// ------
+
+@mixin grid-offset($fraction) {
+    margin-left: #{$fraction*100 + '%'};
+}
+
+//
+// Grid - Breakpoints
+// ==========================================================================
+
+@mixin grid-break($fraction) {
+
+    &\@lg {
+        @media only screen and (min-width: $break-m) {
+            width: #{$fraction*100 + '%'};
+            display: inline-block;
+            float: left;
+        }
+    }
+
+    &\@md {
+        @media only screen and (min-width: $break-xs) and (max-width: $break-m) {
+            width: #{$fraction*100 + '%'};
+            display: inline-block;
+            float: left;
+        }
+    }
+
+    &\@sm {
+        @media only screen and (max-width: $break-xs) {
+            width: #{$fraction*100 + '%'};
+            display: inline-block;
+            float: left;
+        }
+    }
+}
+
+// Offset
+// ------
+
+@mixin grid-offset-break($fraction) {
+
+    &\@lg {
+        @media only screen and (min-width: $break-m) {
+            margin-left: #{$fraction*100 + '%'};
+        }
+    }
+
+    &\@md {
+        @media only screen and (min-width: $break-xs) and (max-width: $break-m) {
+            margin-left: #{$fraction*100 + '%'};
+        }
+    }
+
+    &\@sm {
+        @media only screen and (max-width: $break-xs) {
+            margin-left: #{$fraction*100 + '%'};
+        }
+    }
+}

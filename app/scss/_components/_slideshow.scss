@@ -1,0 +1,21 @@
+.c-slideshow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    text-align: center;
+    width: $width-12;
+    height: $width-12;
+    overflow: hidden;
+    z-index: 0;
+
+    img {
+        width: 2560px;
+        left: -$width-6 !important;
+
+        @media (min-width: 1280px) {
+            width: $width-12;
+            height: auto;
+            left: 0 !important;
+        }
+    }
+}

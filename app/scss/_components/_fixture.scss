@@ -1,0 +1,83 @@
+.c-fixture {
+
+    h2 {
+        @media screen and (min-width: $break-m){
+            padding-bottom: 62px;
+        }
+    }
+
+    &__game {
+        background: $color-grey-dark;
+        width: 32%;
+        margin-bottom: 17px;
+        margin-right: 1.5%;
+        display: inline-block;
+
+        &:nth-child(4),
+        &:nth-child(7),
+        &:nth-child(10) {
+            margin-right: 0;
+        }
+
+        &--in-progress {
+            background: $color-offwhite;
+            color: $color-black;
+        }
+        
+        &--completed {
+            background: #444;
+        }
+
+        @media screen and (max-width: $break-s) {
+            width: $width-12;
+            margin: 0 0 36px;
+        }
+    }
+
+    &__venue {
+        padding: 15px 0 $size-base;
+        font-size: 12px;
+    }
+    
+    
+    &__date {
+        padding: $size-base-lg*0.75 0 $size-base-s;
+        line-height: 1.5;
+    }
+
+    &__vs {
+        display: inline-block;
+        padding: 0 $size-base;
+        vertical-align: top;
+        margin-top: $size-base-lg;
+    }
+
+    &__team {
+        display: inline-block;
+        text-align: center;
+        width: 75px;
+        font-size: 12px;
+        line-height: 16px;
+
+        img,
+        span {
+            display: block;
+
+            &.js-score-text {
+                padding-top: $size-base-xs;
+            }
+        }
+
+        img {
+            width: 75px;
+            height: 75px;
+            text-align: center;
+            margin: $size-base-s 0;
+            // @include boxShadow(3, $color-black);
+        }
+    }
+
+    &__score {
+        font-size: 16px;
+    }
+}

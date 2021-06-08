@@ -1,0 +1,12 @@
+.o-main {
+    min-height: $width-12;
+    height: auto !important;
+    margin-bottom: -$height-footer;
+
+    &:after {
+        content: '';
+        display: block;
+        clear: both;
+        height: $height-footer;
+    }
+}

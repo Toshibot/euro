@@ -1,0 +1,12 @@
+
+// PX to REMs
+@function toRems($size) {
+  $remSize: $size / $size-font-body;
+  @return #{$remSize}rem;
+}
+
+// PX to EMs
+@function toEms($size) {
+    $emSize: $size / $size-font-body;
+    @return #{$emSize}em;
+}

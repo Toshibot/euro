@@ -1,0 +1,131 @@
+.o-content {
+	width: $width-m;
+	margin: 0 auto;
+	color: $color-black;
+	@include borderBox;
+
+	@media (max-width: $break-s) {
+		padding: 0 $size-base;
+	}
+
+	h1 {
+		font-size: 32px;
+		font-family: $font-heading;
+		font-weight: 600;
+		line-height: $size-base-lg;
+		margin-bottom: $size-base-xs;
+
+		@media (max-width: $break-s) {
+			line-height: 35px;
+		}
+	}
+
+	h2 {
+		font-family: $font-heading;
+		font-size: 48px;
+		text-transform: uppercase;
+		font-weight: 400;
+		line-height: $size-base-lg;
+		margin-bottom: $size-base;
+
+		@media (max-width: $break-s) {
+			line-height: 35px;
+
+			&.country {
+				line-height: $size-base-lg;
+			}
+		}
+	}
+
+	h3 {
+		font-family: $font-heading;
+	}
+	
+	p {
+		font-family: $font-body;
+		font-size: 16px;
+		line-height: $size-base;
+		margin-bottom: $size-base;
+	}
+
+	a,
+	a:link,
+	a:visited {
+		color: $color-blue;
+		@include transition(0.3s);
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
+
+	@media (max-width: $break-s) {
+		width: $width-12;
+		padding-top: 0;
+	}
+
+	&--center {
+		text-align: center;
+		margin: 0 auto;
+	}
+
+	p-500 {
+		max-width: 500px;
+	}
+
+	&--alt-heading {
+		text-transform: none !important;
+		font-family: $font-script !important;
+		margin-bottom: 0 !important;	
+		height: $size-base-lg*2;
+		line-height: $size-base-lg*2+$size-base !important;
+
+		@media (max-width: $break-s) {
+			line-height: $size-base-lg+$size-base !important;
+			font-size: 50px !important;
+			height: auto !important;
+		}
+
+		@media (max-width: $break-xs) {
+			line-height: $size-base-lg !important;
+		}
+	}
+
+	&--white {
+		background: $color-white;
+		padding: $size-base-lg $size-base;
+		margin-top: $size-base-lg;
+		@include transition(0.3s);
+		@include boxShadow(5, $color-black);
+
+		&:hover {
+			@include boxShadow(9, $color-black);
+		}
+	}
+
+	&--dark {
+
+		h1, h2, h3 {
+			color: $color-white;
+			line-height: 32px;
+		}
+
+		a,
+		a:link,
+		a:visited {
+			color: rgba($color-white, 0.5);
+
+			&:hover {
+				color: $color-white;
+			}
+		}
+
+		@media (max-width: $break-s) {
+			padding: $size-base 15px;
+		}
+	}
+
+	.t-dark & {
+		color: $color-white;
+	}
+}

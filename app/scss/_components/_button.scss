@@ -1,0 +1,39 @@
+.c-button {
+    border: none;
+    -webkit-appearance: none;
+    padding: 10px 25px;
+    @include borderRadius(5px);
+    font-size: 16px;
+    color: $color-white;
+    font-weight: 400;
+
+    &--github {
+        background: $color-black;
+    }
+
+    i {
+        margin-right: 3px;
+        display: inline-block;
+        font-size: 25px;
+        height: $size-base;
+        line-height: $size-base;
+        vertical-align: text-bottom;
+    }
+
+    span {
+        height: $size-base;
+        line-height: $size-base;
+        vertical-align: text-bottom;
+        display: inline-block;
+    }
+
+    .t-light & {
+        color: $color-white;
+        background-color: $color-black;
+    }
+
+    .t-dark & {
+        color: $color-black;
+        background-color: $color-white;
+    }
+}
