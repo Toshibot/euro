@@ -1,5 +1,6 @@
 .c-ladder {
     // background: $color-white;
+    padding-bottom: $size-base;
 
     &__container {
         @media screen and (min-width: $break-l) {
