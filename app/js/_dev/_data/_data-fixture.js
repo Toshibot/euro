@@ -53,6 +53,8 @@ function dataFixture(data_teams) {
             var currentRound = [];
             var currentRoundNo = matchday[0];
 
+            console.log(matches);
+
             $('.js-fixture-round').text("Matchday " + currentRoundNo);
 
             for (i = 0; i < matches.length; i++) {
